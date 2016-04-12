@@ -1,0 +1,531 @@
+/* -----------------------
+CONTENIDO
+0. FONTS
+1. GENERAL
+2. HEADER
+3. NAVBAR
+4. SLIDER
+5. SHARE
+6. ENLACES
+7. NOSOTROS
+8. CARACTERISTICAS
+9. PRODUCTOS
+    9.1. CATEGORIA
+    9.2. SUB-CATEGOROIA
+    9.3. PRODUCTO
+10. CONTACTANOS
+11. SOLICITAR COTIZACIÓN
+12. DISTRIBUIDORES
+13. FOOTER
+----------------------- */
+
+@charset "UTF-8";
+
+/* ~~~~~~~~~~~~~~~~~
+0. FONTS
+~~~~~~~~~~~~~~~~~ */
+/*@import url(https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900,100italic,300italic,400italic,700italic,900italic);*/
+/*
+@font-face {
+    font-family: 'open_sanslight';
+    src: url('../../assets/fonts/opensans-light-webfont.eot');
+    src: url('../../assets/fonts/opensans-light-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../../assets/fonts/opensans-light-webfont.woff2') format('woff2'),
+    url('../../assets/fonts/opensans-light-webfont.woff') format('woff'),
+    url('../../assets/fonts/opensans-light-webfont.ttf') format('truetype'),
+    url('../../assets/fonts/opensans-light-webfont.svg#open_sanslight') format('svg');
+    font-weight: normal;  font-style: normal;
+}
+
+@font-face {
+    font-family: 'open_sansregular';
+    src: url('../../assets/fonts/opensans-regular-webfont.eot');
+    src: url('../../assets/fonts/opensans-regular-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../../assets/fonts/opensans-regular-webfont.woff2') format('woff2'),
+    url('../../assets/fonts/opensans-regular-webfont.woff') format('woff'),
+    url('../../assets/fonts/opensans-regular-webfont.ttf') format('truetype'),
+    url('../../assets/fonts/opensans-regular-webfont.svg#open_sansregular') format('svg');
+    font-weight: normal;  font-style: normal;
+}
+
+@font-face {
+    font-family: 'open_sanssemibold';
+    src: url('../../assets/fonts/opensans-semibold-webfont.eot');
+    src: url('../../assets/fonts/opensans-semibold-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../../assets/fonts/opensans-semibold-webfont.woff2') format('woff2'),
+    url('../../assets/fonts/opensans-semibold-webfont.woff') format('woff'),
+    url('../../assets/fonts/opensans-semibold-webfont.ttf') format('truetype'),
+    url('../../assets/fonts/opensans-semibold-webfont.svg#open_sanssemibold') format('svg');
+    font-weight: normal;  font-style: normal;
+}
+
+@font-face {
+    font-family: 'open_sansbold';
+    src: url('../../assets/fonts/opensans-bold-webfont.eot');
+    src: url('../../assets/fonts/opensans-bold-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../../assets/fonts/opensans-bold-webfont.woff2') format('woff2'),
+    url('../../assets/fonts/opensans-bold-webfont.woff') format('woff'),
+    url('../../assets/fonts/opensans-bold-webfont.ttf') format('truetype'),
+    url('../../assets/fonts/opensans-bold-webfont.svg#open_sansbold') format('svg');
+    font-weight: normal; font-style: normal;
+}
+
+@font-face {
+    font-family: 'open_sansextrabold';
+    src: url('../../assets/fonts/opensans-extrabold-webfont.eot');
+    src: url('../../assets/fonts/opensans-extrabold-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../../assets/fonts/opensans-extrabold-webfont.woff2') format('woff2'),
+    url('../../assets/fonts/opensans-extrabold-webfont.woff') format('woff'),
+    url('../../assets/fonts/opensans-extrabold-webfont.ttf') format('truetype'),
+    url('../../assets/fonts/opensans-extrabold-webfont.svg#open_sansextrabold') format('svg');
+    font-weight: normal; font-style: normal;
+}
+*/
+
+/*@font-face {
+    font-family: "cayman";
+    src:url("../../assets/fonts/cayman.eot");
+    src:url("../../assets/fonts/cayman.eot?#iefix") format("embedded-opentype"),
+    url("../../assets/fonts/cayman.woff") format("woff"),
+    url("../../assets/fonts/cayman.ttf") format("truetype"),
+    url("../../assets/fonts/cayman.svg#cayman") format("svg");
+    font-weight: normal;  font-style: normal;
+}*/
+
+[data-icon]:before {
+    font-family: "cayman" !important;  content: attr(data-icon);  font-style: normal !important;
+    font-weight: normal !important;  font-variant: normal !important;  text-transform: none !important;
+    speak: none;  line-height: 1;  -webkit-font-smoothing: antialiased;  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+    font-family: "cayman" !important;  font-style: normal !important;  font-weight: normal !important;
+    font-variant: normal !important;  text-transform: none !important;  speak: none;  line-height: 1;
+    -webkit-font-smoothing: antialiased;  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-cart:before { content: "a"; }
+.icon-twitter-alt:before { content: "b"; }
+.icon-facebook:before { content: "c"; }
+.icon-youtube-alt:before { content: "d"; }
+.icon-placepin:before { content: "e"; }
+.icon-call-phone:before { content: "f"; }
+.icon-mail:before { content: "g"; }
+.icon-google-plus:before { content: "h"; }
+.icon-corchetes:before { content: "i"; }
+.icon-engranaje:before { content: "j"; }
+.icon-mapa:before { content: "k"; }
+.icon-moto:before { content: "l"; }
+.icon-pista:before { content: "m"; }
+.icon-reloj:before { content: "n"; }
+.icon-user-circle:before { content: "o"; }
+.icon-contact-2:before { content: "p"; }
+.icon-contact:before { content: "q"; }
+.icon-user:before { content: "r"; }
+.icon-user-male:before { content: "s"; }
+
+/* ~~~~~~~~~~~~~~~~~
+1. GENERAL
+~~~~~~~~~~~~~~~~~ */
+body{  font-family: 'Lato', sans-serif; font-size: 14px; overflow-x: hidden; font-weight: 300;
+background: url("../../assets/img/bg.jpg") repeat-x top center; }
+#main{ position: relative; margin: 0 auto; max-width: 1330px; border-left: 10px solid #cccccc;
+    border-right: 10px solid #cccccc; z-index: 0; background-color: #fff; }
+.img-center{ margin: 0 auto;}
+.borde{ border-top: 60px solid #000;}
+.margen-120{ margin-top: -120px;}
+.margenb-15{ margin-bottom: 15px;}
+.margen-150{ margin-bottom: 150px;}
+.content{ margin-bottom: 120px; background: #fff;}
+#googleMap{ height: 630px;}
+.os_bold{ font-family: "Lato", sans-serif !important; font-weight: 700;}
+
+/* Estilo por defecto */
+/*input:required:invalid {  border: 1px solid red;  }
+input:required:valid {  border: 1px solid green;  }*/
+
+/* ~~~~~~~~~~~~~~~~~
+2. HEADER
+~~~~~~~~~~~~~~~~~ */
+#header{ position: absolute; top: 0; left: 0; width: 100%; z-index: 999;}
+#header > .container{ width: 1070px;}
+#header .header .shop-cart .icon-cart{ font-size: 48px;  margin-top: -14px;  margin-bottom: -10px;}
+.header{ background-color: #fff; height: 80px; }
+.banner{ background-color: #000; height: 80px; padding: 10px 0;}
+.banner img{ width: 150px;}
+.banner:before{ content: "";  border-bottom: 80px solid #000; border-right: 50px solid transparent;
+border-top: 0px solid transparent; position: absolute; top: 0; right: -50px; z-index: 10; }
+.banner:after{ content: "";  border-style: solid;  border-width: 80px 0 86px 50px;
+border-color: #000 transparent transparent transparent;  position: absolute;  top: 0;  left: -50px;  z-index: 10;}
+.shop-cart{font-family: "Lato", sans-serif; font-weight: 300; height: 80px;}
+    .shop-cart > p{ font-family: "Lato", sans-serif; font-weight: 300; font-size: 10px; color: #000; padding-top: 10px;}
+    .shop-cart > p > a{font-family: "Lato", sans-serif; font-weight: 300; font-size: 11px; color: #000; text-decoration: underline;}
+    .shop-cart a{ color: #333;}
+    .shop-cart a h4{font-family: "Lato", sans-serif; font-weight: 400; font-size: 13px; margin: 0; color: #333;}
+    .shop-cart a h5{font-family: "Lato", sans-serif; font-weight: 400; font-size: 11px; margin: 3px 0 0 0; color: #333;}
+    .shop-cart .open > .dropdown-menu{ right: 0; left: inherit; padding: 10px; border-radius: 0;
+        margin-top: 15px !important; margin-right: -17px;}
+    .shop-cart .open > .dropdown-menu li{ width: 100%; float: left;}
+    .shop-cart .open > .dropdown-menu li span.icon-cart{ font-size: 40px !important; height: 40px; margin-right: 20px;
+    margin-bottom: 0px !important;}
+    .shop-cart .open > .dropdown-menu li .btn,
+    .shop-cart .open > .dropdown-menu li .btn:hover,
+    .shop-cart .open > .dropdown-menu li .btn:focus{ background-color: #d90d15 !important; color: #fff !important;
+        font-size: 10px; text-transform: uppercase;  border-radius: 0 !important; border: none !important;}
+    .shop-cart .open > .dropdown-menu li .item .item-info{ padding: 20px;}
+    .shop-cart .open > .dropdown-menu li.info span{ font-size: 12px; color: #333; background-color: #cfcfcf;
+    text-align: center; display: block; width: 100%; padding: 5px 0; margin: 20px 0;}
+
+/* ~~~~~~~~~~~~~~~~~
+3. NAVBAR
+~~~~~~~~~~~~~~~~~ */
+.navbar-header li{  height: 45px;  padding: 0 10px; line-height: 26px; }
+.navbar-header li a{  color: #fff;  text-transform: uppercase;  margin: 0 5px; height: 45px; }
+.navbar-header li a:hover,
+.navbar-header li.active a,
+.navbar-header li:hover a{  background-color: #000;  color: #fff !important; }
+.navbar-header li:hover:before,
+.navbar-header li.active:before{  content: "";  border-bottom: 45px solid #000;  border-right: 30px solid transparent;
+border-top: 0px solid transparent;  position: absolute;  top: 0;  right: -15px;  z-index: 10;  }
+.navbar-header li:hover:after,
+.navbar-header li.active:after{ content: "";  border-style: solid;  border-width: 45px 0 45px 30px;
+border-color: #000 transparent transparent transparent;  position: absolute;  top: 0;  left: -15px;  z-index: 10;}
+.navbar > .container{ width: 1040px; }
+.f-nav{ z-index: 9999; position: fixed !important; background-color: #fff; left: 0; top: 0; width: 100%;}
+
+/* ~~~~~~~~~~~~~~~~~
+4. SLIDER
+~~~~~~~~~~~~~~~~~ */
+#slider{ border-bottom: 1px solid #fff; z-index: -1;}
+.ms-tenor{ font-family: "Lato", sans-serif; font-weight: 700; font-size: 34px; color: #fff; letter-spacing: -1px;
+    min-width: 162px; text-transform: uppercase;}
+.ms-tenor span:first-child{ border-bottom: 5px solid #d90d15; color: #d90d15;}
+.ms-tenor span:last-child{ border-bottom: 5px solid #000; padding-left: 10px;}
+.ms-caption{ font-family: "Lato", sans-serif; font-weight: 700; font-size: 34px; color: #fff; letter-spacing: -1px;
+background: url("../../assets/img/line.png") right bottom no-repeat; min-width: 162px; padding-bottom: 3px !important;}
+.ms-skin-default .ms-nav-next{ margin-right: 30px !important; margin-top: 0 !important;}
+.ms-skin-default .ms-nav-prev{ margin-left: 30px !important; margin-top: 0 !important;}
+
+/* ~~~~~~~~~~~~~~~~~
+5. SHARE
+~~~~~~~~~~~~~~~~~ */
+.share{ position: absolute; top: 185px; right: 0; z-index: 99;}
+.share li{ background-color: red; width: 41px; height: 43px; border-bottom: 1px solid #fff;}
+.share li:last-child{ border-bottom: none;}
+.share li a{ display: block; width: 41px; height: 42px; background-position:top;
+    -webkit-transition:background-position .1s ease-in; -moz-transition:background-position .1s ease-in;
+    -o-transition:background-position .1s ease-in; transition:background-position .1s ease-in; }
+.share li a.fb{ background: url("../../assets/img/icon-fb.png"); }
+.share li a.tw{ background: url("../../assets/img/icon-tw.png"); }
+.share li a.go{ background: url("../../assets/img/icon-go.png"); }
+.share li a:hover{ background-position: bottom;}
+.share li:last-child{ height: 41px;}
+
+/* ~~~~~~~~~~~~~~~~~
+6. ENLACES
+~~~~~~~~~~~~~~~~~ */
+.enlaces{ background: #fff; z-index: 999; -webkit-box-shadow: 10px 10px 25px 0px rgba(0,0,0,0.25);
+    -moz-box-shadow: 10px 10px 25px 0px rgba(0,0,0,0.25); box-shadow: 10px 10px 25px 0px rgba(0,0,0,0.25);
+    margin-bottom: 50px; padding: 15px 0;}
+.enlaces .item{ height: 320px;}
+.enlaces .item h2{ font-size: 20px; font-family: "Lato", sans-serif; font-weight: 700;}
+.enlaces .item p{ font-size: 12px; font-family: 'Lato', sans-serif; font-weight: 400;}
+.enlaces .item h2,
+.enlaces .item p{ padding-left: 5px;}
+.enlaces .item p a{ color: red !important; text-align: right; font-family: 'Lato', sans-serif; font-size: 14px; font-weight: 300;}
+.enlaces .item p:last-child{  position: absolute; bottom: 0; width: 100%; padding-right: 50px; text-align: right;}
+.enlaces .item .imagen{  overflow: hidden;  max-width: 100%;  max-height: 170px;  background: #fff;
+    -webkit-box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.25);  -moz-box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.25);
+    box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.25);  -webkit-transform: skew(5deg);  -moz-transform: skew(5deg);
+    -ms-transform: skew(5deg);  -o-transform: skew(5deg);  transform: skew(5deg);
+}
+.enlaces .item .imagen img{  max-width: 300px;  max-height: 170px;  margin-left: -10px;  margin-top: 0px;
+    -webkit-transform: skew(-5deg);  -moz-transform: skew(-5deg);  -ms-transform: skew(-5deg);
+    -o-transform: skew(-5deg);  transform: skew(-5deg);  -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;  -o-transition: all 1s ease;  -ms-transition: all 1s ease;  transition: all 1s ease;
+}
+.enlaces .item:hover .imagen img {  transform : scale(1.25) skew(-5deg); -moz-transform : scale(1.25) skew(-5deg);
+    -webkit-transform : scale(1.25) skew(-5deg);  -o-transform : scale(1.25) skew(-5deg);  -ms-transform : scale(1.25) skew(-5deg);
+}
+
+/* ~~~~~~~~~~~~~~~~~
+7. NOSOTROS
+~~~~~~~~~~~~~~~~~ */
+.nosotros .tenor h2{ font-size: 20px; font-family: "Lato", sans-serif; font-weight: 400; line-height: 38px;}
+.nosotros .tenor h2 span{color: red;}
+.nosotros .tenor p span.icon-corchetes{font-size: 24px;}
+.nosotros .tenor p{ font-size: 13px; font-family: "Lato", sans-serif; font-weight: 400; }
+.nosotros .tenor p img{ margin: 40px 0 0;}
+.nosotros .tenor h3{ font-family: "Lato", sans-serif; font-weight: 400; font-size: 19px; margin: 0 0 40px 0;}
+.nosotros .tenor h4{ font-family: "Lato", sans-serif; font-weight: 400; font-size: 19px; margin: 40px 0 30px 0;}
+.nosotros .tenor h3 span{ background: url("../../assets/img/line.jpg") bottom center no-repeat; padding: 0 0 2px; }
+.nosotros .tenor h4 span{ background: url("../../assets/img/line.jpg") bottom left no-repeat; display: block;
+min-width: 156px; padding: 0 0 2px;}
+
+/* ~~~~~~~~~~~~~~~~~
+8. CARACTERISTICAS
+~~~~~~~~~~~~~~~~~ */
+.caracteristicas{background: #000 url("../../assets/img/background-1.jpg") no-repeat center center; height: 234px;
+-webkit-background-size: cover;  -moz-background-size: cover;  -o-background-size: cover;  background-size: cover;
+margin-bottom: 120px; margin-top: 30px;}
+.grid-5{ width: 20%; padding: 0 15px; display: block; position: relative; float: left;
+    -webkit-transition: margin 0.5s ease-out; -moz-transition: margin 0.5s ease-out;
+    -o-transition: margin 0.5s ease-out; }
+.caracteristicas .grid-5 h5{ font-family: "Lato", sans-serif; font-weight: 400; font-size: 13px; color: #fff; text-transform:
+uppercase; text-align: center;}
+.caracteristicas .grid-5 p{ text-align: center; padding-top: 50px;}
+.caracteristicas .grid-5:nth-child(2) p{ margin-top: -20px; margin-bottom: -13px;}
+.caracteristicas .grid-5:nth-child(2) p span[class*="icon-"]{ font-size: 70px;}
+.caracteristicas .grid-5 p span[class*="icon-"]{ color: #fff; font-size: 40px;}
+.caracteristicas .grid-5:hover{ margin-top: -20px;}
+
+/* ~~~~~~~~~~~~~~~~~
+9. PRODUCTOS
+~~~~~~~~~~~~~~~~~ */
+.productos{ margin-top: 40px; padding: 0;}
+.productos .cadenas > div.col-md-12 > div.col-md-6{ margin-bottom: 40px;}
+
+/* ~~~~~~~ 9.1. CATEGORIA */
+.productos .categoria{ background: url("../../assets/img/line-2.png") left bottom no-repeat; background: 1.0s;
+margin-bottom: 40px;}
+.productos .categoria:hover{background: url("../../assets/img/line-1.png") left bottom no-repeat;}
+.productos .categoria h4{background-color: #000; margin: 0; transition: background 1.0s; font-size: 20px;}
+.productos .categoria:hover h4{ background-color: #d80d15; }
+.productos .categoria h4 a{ color: #fff; font-family: "Lato", sans-serif; font-weight: 300; width: 100%; display: block;
+padding: 30px 0; text-decoration: none; }
+.productos .categoria p{ padding: 40px 30px; font-family: "Lato", sans-serif; font-weight: 300; font-size: 12px;}
+.productos .categoria .categoria-img-content{ overflow: hidden; height: 168px; width: 270px;}
+.productos .categoria .categoria-img-content a{ display: block; position: relative;
+    width: 100% !important; height: 100% !important; }
+.productos .categoria .categoria-img-content a img{ -webkit-transition: all 1s ease; -moz-transition: all 1s ease;
+    -o-transition: all 1s ease; -ms-transition: all 1s ease;  transition: all 1s ease; }
+.productos .categoria:hover .categoria-img-content a img{  transform : scale(1.25); -moz-transform : scale(1.25);
+    -webkit-transform : scale(1.25); -o-transform : scale(1.25); -ms-transform : scale(1.25);}
+
+/* ~~~~~~~ 9.2. SUB-CATEGORIA */
+.productos .sub-categoria{ background: url("../../assets/img/line-3.png") left bottom no-repeat; background: 1.0s;
+margin-bottom: 40px; margin: 0 10px 40px;}
+.productos .sub-categoria:hover{background: url("../../assets/img/line-1.png") left bottom no-repeat;}
+.productos .sub-categoria-img-content{ padding: 30px 0; overflow: hidden;}
+.productos .sub-categoria h4{background-color: #ededed; margin: 0; transition: background 1.0s;}
+.productos .sub-categoria:hover h4{ background-color: #d80d15; }
+.productos .sub-categoria h4 a{ color: #000; font-family: "Lato", sans-serif; width: 100%; display: block;
+    padding: 30px 0; text-decoration: none; font-size: 15px; font-weight: 300;}
+.productos .sub-categoria:hover h4 a{ color: #fff;}
+.productos .sub-categoria p{ padding: 40px 30px; font-family: "Lato", sans-serif; font-size: 12px; font-weight: 300;}
+.productos .sub-categoria .btn-enlace{ display: block; height: 27px; width: 135px; font-size: 11px; line-height: 27px;
+font-family: "Lato", sans-serif; font-weight: 300; text-align: center; float: right; color:#fff; margin: 0 0 15px;
+background: url("../../assets/img/btn-vermas.png") center center no-repeat;}
+.productos .sub-categoria .btn-enlace .visible{ display: inherit;}
+.productos .sub-categoria .btn-detalle{ color: #080808; line-height: 30px; font-weight: 400; font-size: 11px;}
+.productos .sub-categoria .btn-detalle span{ color: red;}
+.productos .titulo h1{ font-family: "Lato", sans-serif; font-weight: 700; font-size: 18px; text-transform: uppercase;
+    color: #000; background: url("../../assets/img/line1.png") no-repeat right bottom; padding: 10px 0; min-width: auto;
+    margin: 0; float: left;}
+.productos .titulo h2{ font-family: "Lato", sans-serif; font-weight: 400; font-size: 20px; text-transform: uppercase;
+    color: #000; padding: 10px 0; min-width: auto; margin: 0; float: left;}
+.productos .titulo p{
+    font-family: "open_sansbold", sans-serif; font-size: 18px; text-transform: uppercase; color: #000; padding: 7px 6px;
+    min-width: auto; margin: 0; float: left; }
+.productos .sub-categoria .sub-categoria-img-content a img{ -webkit-filter: grayscale(100%); filter: grayscale(100%); filter: gray;
+    filter: url("data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org/2000/svg' height='0'><filter id='greyscale'><feColorMatrix type='matrix' values='0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0' /></filter></svg>#greyscale");
+}
+.productos .sub-categoria:hover .sub-categoria-img-content a img{  -webkit-filter: none;  filter: none;  filter: none;
+    transform : scale(1.25);  -moz-transform : scale(1.25);  -webkit-transform : scale(1.25);
+    -o-transform : scale(1.25);  -ms-transform : scale(1.25);
+    -webkit-transition: all 1s ease;  -moz-transition: all 1s ease;  -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;  transition: all 1s ease;
+}
+.pagination > li > a{ font-family: "Lato", sans-serif; font-weight: 700; }
+
+/* ~~~~~~~ 9.3. PRODUCTO */
+.producto h2{  font-family: "Lato", sans-serif; font-weight: 700; font-size: 20px; color: #d80d15; text-transform: uppercase;
+    margin-bottom: 20px;}
+.producto h3{  font-family: "Lato", sans-serif; font-weight: 400; font-size: 17px; color: #333; text-transform: uppercase;
+    margin-bottom: 17px;}
+.producto .contenido p{ padding: 0 0 20px 0; font-family: "Lato", sans-serif; font-size: 13px; font-weight: 300;
+    text-align: justify;}
+.producto .contenido .line-border hr{margin: 0;}
+.producto .contenido .line-border {margin: 0; position: relative;}
+.producto .contenido .line-border:before{ content: ""; border-bottom: 8px solid #d80d15; z-index: 10;
+    border-top: 0px solid transparent;  position: absolute;  bottom: 0;  left: 0; border-right: 8px solid transparent; }
+.producto .contenido .listado-caracteristicas h3{ font-size: 14px; text-transform: uppercase; margin: 30px 0 20px;
+    border-bottom: 1px solid #333;}
+.producto .contenido .listado-caracteristicas h3 a{ color: #333; font-family: 'Lato', sans-serif; text-decoration: none;
+    font-weight: 700; font-size: 12px; line-height: 1.9em;}
+.producto .contenido .listado-caracteristicas h3 a:last-child{ color: #fff; font-family: 'Lato', sans-serif; font-weight: 300;
+background-color: #000; padding: 5px 10px; font-size: 11px; line-height: inherit;     display: inline-block; position: relative;
+margin-left: 20px;}
+.producto .contenido .listado-caracteristicas h3 a:last-child:before{  content: ""; border-style: solid;
+    border-width: 23px 0 24px 15px; border-color: #000 transparent transparent transparent; position: absolute;
+    top: 0; left: -15px; z-index: 10; }
+.producto .contenido .listado-caracteristicas .table{ font-family: 'Lato', sans-serif; font-size: 12px; font-weight: 700;}
+.producto .contenido .listado-caracteristicas .table tr td{ border: 0; padding: 3px 0;}
+.producto .galeria .titulo{ position: relative; width: 100%;}
+.producto .galeria .titulo ul{ height: 49px; margin-bottom: 0; background: #000;  float: left; margin-left: 0;}
+.producto .galeria .titulo li{ padding-left: 0;}
+.producto .galeria .titulo ul li:first-child a{ font-family: 'Lato', sans-serif; font-size: 17px; color: #fff; margin: 0;
+    background: url("../../assets/img/galeria.png") right top no-repeat; height: 49px; line-height: 49px; font-weight: 300;
+    padding: 0 50px 0 40px;  text-transform: uppercase; float: left;}
+.producto .galeria .titulo ul li a{ font-family: 'Lato', sans-serif; font-size: 17px; color: #fff; margin: 0;
+    height: 49px; line-height: 49px; padding: 0 50px 0 20px;  text-transform: uppercase; float: left; font-weight: 300;}
+
+.producto .galeria .carousel-galeria .colores{  display: table-cell; height: 39px; width: auto; padding: 0 10px;
+    vertical-align: middle; position: absolute; z-index: 9999; top: 10px; right: 10px;}
+.producto .galeria .carousel-galeria .colores .texto{ display: block;  float: left; text-transform: uppercase;
+color: red; font-size: 12px; }
+.producto .galeria .carousel-galeria .colores .color{ display: block; height: 15px; width: 15px; float: left;
+    margin-left: 5px;}
+.producto .galeria .carousel-galeria{ margin-bottom: 126px; position: relative;}
+.producto .galeria .botones{ margin: 30px 0;}
+.producto .galeria .botones .btn-cotizacion{ background: #d63a26; font-family: 'Lato', sans-serif;
+    font-size: 10px; color: #fff; text-transform: uppercase; padding:0 20px; border-radius: 3px;
+    text-decoration: none; display: inline-block; line-height: 30px; font-weight: 300;}
+.productos .btn-compartir{ background: #d63a26; font-family: 'Lato', sans-serif; font-weight: 300;
+    font-size: 10px;  color: #fff; text-transform: uppercase; padding:8px 30px 8px 35px; border-radius: 3px;
+    text-decoration: none; display: inline-block; position: relative; margin-top: 20px;}
+.productos .btn-compartir span{ float: left; font-size: 26px; position: absolute; bottom: -11px;
+    left: 0;}
+.reco .col-md-4{ height: 430px;}
+.reco .col-md-6{ height: 340px;}
+.reco .carousel-indicators{ bottom: 0 !important;}
+.reco .btn-compartir{ position: absolute; bottom: 0; right: 20px;}
+
+/* ~~~~~~~ 9.4. POST-VENTA */
+.productos .post-venta{ padding: 0 10px;}
+.productos .post-venta{ background: url("../../assets/img/line-5.png") 10px bottom no-repeat; background: 1.0s;
+    margin-bottom: 40px;}
+.productos .post-venta:hover{background: url("../../assets/img/line-4.png") 10px bottom no-repeat;}
+.productos .post-venta h4{background-color: #000; margin: 0; transition: background 1.0s;}
+.productos .post-venta:hover h4{ background-color: #d80d15; }
+.productos .post-venta h4 a{ color: #fff; font-family: "Lato", sans-serif; width: 100%; display: block;
+    padding: 50px 0; text-decoration: none; font-size: 20px; font-weight: 700; }
+.productos .post-venta p{ padding: 40px 30px; font-family: "Lato", sans-serif; font-size: 12px;}
+.productos .post-venta .categoria-img-content{ overflow: hidden; font-weight: 300;}
+.productos .post-venta .categoria-img-content a img{ -webkit-transition: all 1s ease; -moz-transition: all 1s ease;
+    -o-transition: all 1s ease; -ms-transition: all 1s ease;  transition: all 1s ease;}
+.productos .post-venta:hover .categoria-img-content a img{
+    transform : scale(1.25);  -moz-transform : scale(1.25);  -webkit-transform : scale(1.25);
+    -o-transform : scale(1.25);  -ms-transform : scale(1.25);
+}
+
+/* ~~~~~~~~~~~~~~~~~
+10. CONTACTANOS
+~~~~~~~~~~~~~~~~~ */
+.contactanos{ margin-top: 40px; padding: 0; margin-bottom: 120px;}
+.contactanos form{ margin: 40px 0;}
+.contactanos .pl30{ padding-left: 30px !important;}
+.contactanos .pl30-1{ padding: 50px 0 0 30px !important;}
+.contactanos form .form-group .col-md-6{ padding-bottom: 15px;}
+.contactanos form .form-group .col-md-6:last-child .row{ padding-left: 5px;}
+.contactanos form .form-group .col-md-6:first-child .row{ padding-right: 5px;}
+.contactanos form .btn { border: 0; text-transform: uppercase; border-radius: 0; font-size: 12px; padding: 6px 25px;
+    position: relative;}
+.contactanos form .btn-danger{ background: #D80D15; padding: 10px 40px;}
+.contactanos form .btn-warning{ background: #000; padding: 10px 50px 10px 30px;}
+.contactanos form .btn-danger:before{  content: "";  border-style: solid; border-width: 38px 0 30px 30px;
+    border-color: #D80D15 transparent transparent transparent; position: absolute;  top: 0;  left: -30px;  z-index: 10;}
+
+/* ~~~~~~~~~~~~~~~~~
+11. SOLICITAR COTIZACIÓN
+~~~~~~~~~~~~~~~~~ */
+.bootstrap-select{ border: 1px solid #bbbbbb;}
+.bootstrap-select .btn{ padding: 8px 10px 7px !important; text-transform: inherit !important;}
+.form-group .sel{ padding: 0 0 0 5px;}
+.cont1{ margin-top: 0px !important;}
+.cont1 .pl30-1{ padding: 20px 0 0 30px !important;}
+.btn-atras{ color: #333 !important; font-weight: 600; font-family: "Lato", sans-serif; padding-top: 20px; font-weight: 700;}
+.cont1 .producto .item{ padding-top: 40px; padding-bottom: 20px; position: relative; float: left; width: 100%;}
+.cont1 .producto .item .titulo{ font-family: "Lato", sans-serif; font-weight: 700; }
+.cont1 .producto .item .cantidad .form-group label{ font-family: "Lato", sans-serif; font-weight: 700;}
+.cont1 .producto .item .cantidad .form-group .form-control{ width: 100px !important; margin-left: 20px; text-align: center;}
+.cont1 .producto .contenido{ position: relative; float: left; width: 100%; }
+.info{ font-family: "Lato", sans-serif; font-weight: 700; margin-top: 70px;}
+.cont1 .producto .item .precio{ background-color: #cfcfcf; font-size: 12px; color: #fff;
+    background-color: #cfcfcf; text-align: center; display: block; width: 100%; padding: 5px 0;
+    font-family: "Lato", sans-serif; font-weight: 700;}
+.cont1 .producto .contenido .user-icon{ border-radius: 30px; font-size: 160px; background-color: #d90d15; color: #fff;
+    text-align: center; height: 160px; border: 1px solid #d90d15; overflow: hidden;}
+.cont1 .producto .contenido .user-icon-1{ border-radius: 30px; font-size: 140px; background-color: #d90d15;
+    color: #fff; text-align: center; height: 140px; border: 1px solid #d90d15; overflow: hidden; width: 140px;}
+.cont1 .producto .marco{ border: 1px solid #bbb; margin-top: 40px;}
+.cont1 .producto .marco p{font-family: "Lato", sans-serif; font-weight: 700; font-size: 14px; padding: 50px;}
+.cont1 .producto .marco p a{ color: #333; text-decoration: underline; padding: 0 20px;}
+.cont1 .producto .contenido ul.list-unstyled{ margin-top: 20px;}
+.cont1 .producto .contenido ul.list-unstyled li a{font-family: "Lato", sans-serif; font-weight: 700; font-size: 13px;
+    color: #333; padding: 15px 10px; line-height: 4em; text-decoration: none; }
+.cont1 .producto .contenido ul.list-unstyled li a:hover,
+.cont1 .producto .contenido ul.list-unstyled li.active a{color: #D90D15;}
+.cont1 .producto .separator-left{ border-left: 1px solid #bbb; padding-left: 30px; position: relative;
+    float: left;}
+.cont1 .producto .separator-left .form-group{ position: relative; float: left; width: 100%;}
+.cont1 .producto .separator-left .form-group .col-md-6{ padding-bottom: 0;}
+.cont1 .producto .info-coti{ margin-top: 40px;}
+.cont1 .producto .info-coti .form-horizontal{ margin-top: 0;}
+.cont1 .producto .info-coti .form-horizontal .form-group .control-label{ text-align: left;
+    font-family: "Lato", sans-serif; font-weight: 700;}
+.cont1 .producto .info-coti .form-horizontal .form-group div{padding-top: 7px;}
+.cont1 .producto .info-coti .contenido img{margin-bottom: 40px;}
+.cont1 .producto .info-coti .contenido h5{ font-family: "Lato", sans-serif; font-weight: 700;}
+#cotizaciones .item-cot a{text-decoration: none;}
+#cotizaciones .item-cot a span{font-family: "Lato", sans-serif; font-size: 11px; font-weight: 300;
+    width: 100%; text-transform: uppercase; text-align: center; display: block;}
+#cotizaciones .item-cot a span.title{ padding: 15px 0; background-color: #ededed; color: #000;
+    margin: 10px 0;}
+#cotizaciones .item-cot a span.date{ text-transform: none; font-size: 14px; color: #333; opacity: 0;}
+#cotizaciones .item-cot a:hover span.title{ background-color: #d90d15; color: #fff;}
+#cotizaciones .item-cot a:hover span.date{ opacity: 100;}
+.tab-content .tab-pane{ margin-bottom: 100px !important; position: relative; float: left; width: 100%;}
+
+/* ~~~~~~~~~~~~~~~~~
+12. DISTRIBUIDORES
+~~~~~~~~~~~~~~~~~ */
+.distribuidores ul.menuc{ background: #000; height: 49px; margin-top: 20px; margin-bottom: 40px;}
+.distribuidores ul.menuc li{ padding: 0;}
+.distribuidores ul.menuc li:first-child a{ font-family: 'Lato', sans-serif; font-size: 12px; color: #fff; margin: 0;
+    background: url("../../assets/img/galeria.png") right top no-repeat; height: 49px; line-height: 49px;
+    padding: 0 50px 0 20px;  text-transform: uppercase; float: left; font-weight: 300;}
+.distribuidores ul.menuc li a{ font-family: 'Lato', sans-serif; font-size: 12px; color: #fff; margin: 0; font-weight: 300;
+    height: 49px; line-height: 49px; padding: 0 50px 0 20px;  text-transform: uppercase; float: left;}
+.distribuidores h3{font-family: 'Lato', sans-serif; font-size: 22px; font-weight: 400;
+    text-transform: uppercase; margin-top: 30px; margin-bottom: 10px; }
+.distribuidores .table thead tr td{ border-bottom: 2px solid red; font-family: 'Lato', sans-serif;
+    font-size: 13px; color: red; padding: 8px 0 !important; font-weight: 400;}
+.distribuidores .table tbody tr td{ padding: 20px 0px; font-size: 13px;}
+.distribuidores .table tbody tr td a{font-family: 'Lato', sans-serif; font-size: 10px; font-weight: 700; color: #000;}
+
+/* ~~~~~~~~~~~~~~~~~
+13. FOOTER
+~~~~~~~~~~~~~~~~~ */
+footer{}
+footer .bg-footer-0{ background-color: #d71617; padding: 5px 0; }
+footer .bg-footer-0 li:first-child{ border-left: none;}
+footer .bg-footer-0 ul{ margin: 5px 0;}
+footer .bg-footer-0 li{width: 42px; height: 42px; border-right: 1px solid #fff; padding: 0; float: left;}
+footer .bg-footer-0 li:last-child{ border-right: none;}
+footer .bg-footer-0 li a{ display: block; width: 41px; height: 42px; background-position:top;
+    -webkit-transition:background-position .1s ease-in; -moz-transition:background-position .1s ease-in;
+    -o-transition:background-position .1s ease-in; transition:background-position .1s ease-in; }
+footer .bg-footer-0 li a.fb{ background: url("../../assets/img/icon-fb.png"); }
+footer .bg-footer-0 li a.tw{ background: url("../../assets/img/icon-tw.png"); }
+footer .bg-footer-0 li a.go{ background: url("../../assets/img/icon-go.png"); }
+footer .bg-footer-0 li a:hover{ background-position: bottom;}
+footer .bg-footer-0 .row .col-md-6:first-child{ margin-top: 10px;}
+footer .bg-footer-1{ background: url("../../assets/img/bg-footer.jpg") no-repeat center center; padding: 40px 0;
+    -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../assets/img/bg-footer.jpg', sizingMethod='scale');
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../assets/img/bg-footer.jpg', sizingMethod='scale')";}
+footer .bg-footer-2{ background-color: #212121; padding: 20px 0; color: #666666; font-size: 11px;}
+footer .bg-footer-2 a{ color: #fff;}
+footer .bg-footer-1 h4{ color: #fff; font-size: 14px;}
+footer .bg-footer-1 li{ padding: 0 0 10px 0;}
+footer .bg-footer-1 li span[class*="glyphicon-triangle-"]{ color: #d81517; font-size: 11px; }
+footer .bg-footer-1 p, footer .bg-footer-1 li a,footer .bg-footer-2 p{ font-size: 10px; color: #fff;}
+footer .bg-footer-1 p{ line-height: 18px;}
+footer .bg-footer-1 .container .row .col-md-3 > img{ padding-bottom: 30px;}
+footer .bg-footer-1 .carousel .carousel-inner .item .col-md-12 .col-md-4{ padding: 0 0 5px 0; }
+.carousel-indicators{ bottom: -30px !important;}
+.carousel-indicators li{ border: none; background-color: #d71617; margin: 0;}
+.carousel-indicators .active{ width: 10px !important; height: 10px !important;}
+.bg-footer-1 .contacto span[class*="icon-"]{ font-size: 14px; padding: 2px 10px 0 0; float: left;}
