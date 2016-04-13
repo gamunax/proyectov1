@@ -1,1 +1,0 @@
-[23-Sep-2015 07:48:56 UTC] PHP Parse error:  syntax error, unexpected '$db' (T_VARIABLE) in /home/admcimahpsa/public_html/maphsanew/application/config/database.php on line 53
